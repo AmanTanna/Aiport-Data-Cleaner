@@ -46,6 +46,8 @@ python app.py
 3. View cleaned results in a table
 4. Use "Use Result as New Input" for iterative cleaning
 
+Click on Load Example Data to see a standard example.
+
 ## Data Format
 
 Expected input format:
