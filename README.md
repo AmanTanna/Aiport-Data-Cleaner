@@ -38,6 +38,33 @@ python app.py
 6. **Access the application**
 - Open your browser and navigate to: http://127.0.0.1:5000
 
+
+## Usage
+
+1. Input raw airport data in semicolon-delimited format
+2. Click "Clean Data"
+3. View cleaned results in a table
+4. Use "Use Result as New Input" for iterative cleaning
+
+## Data Format
+
+Expected input format:
+```
+Airline Code;DelayTimes;FlightCodes;To_From
+Air Canada (!);[21, 40];20015.0;WAterLoo_NEWYork
+```
+## Cleaning Operations
+
+- Normalizes airline codes
+- Splits origin/destination cities
+- Interpolates missing flight codes
+- Standardizes case formatting
+
+## Project Structure
+
+- `app.py` - Flask backend with cleaning logic
+- `templates/index.html` - Frontend interface
+
 ## Web Deployment (Render)
 
 1. **Create required files**
@@ -69,31 +96,5 @@ python app.py
 - Create New Web Service
 - Connect your GitHub repository
 - Render will automatically detect and deploy
-
-## Usage
-
-1. Input raw airport data in semicolon-delimited format
-2. Click "Clean Data"
-3. View cleaned results in a table
-4. Use "Use Result as New Input" for iterative cleaning
-
-## Data Format
-
-Expected input format:
-```
-Airline Code;DelayTimes;FlightCodes;To_From
-Air Canada (!);[21, 40];20015.0;WAterLoo_NEWYork
-```
-## Cleaning Operations
-
-- Normalizes airline codes
-- Splits origin/destination cities
-- Interpolates missing flight codes
-- Standardizes case formatting
-
-## Project Structure
-
-- `app.py` - Flask backend with cleaning logic
-- `templates/index.html` - Frontend interface
 
 
